@@ -5,7 +5,7 @@ $(function() {
     $(document).ready(function() {
       console.log( "ready!" );
 
-      $.get("https://raw.githubusercontent.com/rudihartono7/hewanqurban/main/assets/data/product.json", function(data, status){
+      $.get("https://raw.githubusercontent.com/rudihartono7/data-hewan-qurban-2021/main/product.json", function(data, status){
         console.log(data, status);
         var product = JSON.parse(data);
 
@@ -24,7 +24,7 @@ $(function() {
                                       <span class="regular-price">`+val.price+`</span>
                                       <span class="discount-price">`+val.finalPrice+`</span>
                                       <br />
-                                      <span><a class="Video-popup" href="https://www.youtube.com/watch?v=l8ccw7BMrMA">Lihat Video<i class="lni-play"></i></a></span>
+                                      <span><a class="Video-popup" href="`+val.youtubeUrl+`">Lihat Video<i class="lni-play"></i></a></span>
                                   </div>
                               </div> <!-- single product items -->
                           </div>`;  
@@ -44,7 +44,7 @@ $(function() {
                                       <span class="regular-price">`+val.price+`</span>
                                       <span class="discount-price">`+val.finalPrice+`</span>
                                       <br />
-                                      <span><a class="Video-popup" href="https://www.youtube.com/watch?v=l8ccw7BMrMA">Lihat Video<i class="lni-play"></i></a></span>
+                                      <span><a class="Video-popup" href="`+val.youtubeUrl+`">Lihat Video<i class="lni-play"></i></a></span>
                                   </div>
                               </div> <!-- single product items -->
                           </div>`;  
@@ -60,7 +60,7 @@ $(function() {
       });
 
 
-      $.get("https://raw.githubusercontent.com/rudihartono7/hewanqurban/main/assets/data/testimony.json", function(data, status){
+      $.get("https://raw.githubusercontent.com/rudihartono7/data-hewan-qurban-2021/main/testimony.json", function(data, status){
         jQuery.each( JSON.parse(data).datas, function( i, val ) {
           var testimonyElement = `<div class="single-testimonial">
           <i class="lni-quotation"></i>
