@@ -4,17 +4,19 @@
             "imageUrl": "https://github.com/rudihartono7/hewanqurban/blob/main/assets/images/product/p-1.jpg?raw=true",
             "status": 0,
             "price": "4,2jt",
-            "grade": "D",
-            "weight": ">40"
+            "finalPrice":"4,1jt",
+            "grade": "KELAS DOMBA D",
+            "weight": "Kirasan harga > 40kg"
         }
     ],
     "sapi":[
         {
             "imageUrl": "https://github.com/rudihartono7/hewanqurban/blob/main/assets/images/product/p-1.jpg?raw=true",
             "status": 0,
-            "price": "4,2jt",
-            "grade": "D",
-            "weight": ">40"
+            "price": "26,5jt",
+            "finalPrice":"26jt",
+            "grade": "-",
+            "weight": "-"
         }
     ]
 }

@@ -9,10 +9,45 @@ $(function() {
         console.log(data, status);
         var product = JSON.parse(data);
 
-        jQuery.each( product.datas, function( i, val ) {
+        jQuery.each( product.domba, function( i, val ) {
           console.log(val, i);
+
+          var newProduct = `<div class="col-md-4">
+                              <div class="single-product-items">
+                                  <div class="product-item-image">
+                                      <a href="#"><img src="`+val.imageUrl+`" alt="Product"></a>
+                                      `+showStatus(val.status)+`
+                                  </div>
+                                  <div class="product-item-content text-center mt-30">
+                                      <h5 class="product-title"><a href="#">`+val.grade+`</a></h5>
+                                      <h6>`+val.weight+`</h6>
+                                      <span class="regular-price">`+val.price+`</span>
+                                      <span class="discount-price">`+val.finalPrice+`</span>
+                                  </div>
+                              </div> <!-- single product items -->
+                          </div>`;  
+          $(newProduct).appendTo($(".product-domba-items-active"));
         });
 
+        jQuery.each( product.sapi, function( i, val ) {
+          console.log(val, i);
+
+          var newProduct = `<div class="col-md-4">
+                              <div class="single-product-items">
+                                  <div class="product-item-image">
+                                      <a href="#"><img src="`+val.imageUrl+`" alt="Product"></a>
+                                      `+showStatus(val.status)+`
+                                  </div>
+                                  <div class="product-item-content text-center mt-30">
+                                      <h5 class="product-title"><a href="#">`+val.grade+`</a></h5>
+                                      <h6>`+val.weight+`</h6>
+                                      <span class="regular-price">`+val.price+`</span>
+                                      <span class="discount-price">`+val.finalPrice+`</span>
+                                  </div>
+                              </div> <!-- single product items -->
+                          </div>`;  
+          $(newProduct).appendTo($(".product-sapi-items-active"));
+        });
       });
 
 
@@ -29,6 +64,16 @@ $(function() {
 
     });
     
+    function showStatus(val){
+      if(val == 1) {
+        return `<div class="product-discount-tag">
+                    <p>SOLD</p>
+                </div>`;
+      }
+
+      return "";
+    }
+
     //===== Prealoder
     
     $(window).on('load', function(event) {
