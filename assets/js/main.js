@@ -2,6 +2,32 @@ $(function() {
     
     "use strict";
     
+    $(document).ready(function() {
+      console.log( "ready!" );
+
+      $.get("https://raw.githubusercontent.com/rudihartono7/hewanqurban/main/assets/data/product.json", function(data, status){
+        console.log(data, status);
+        var product = JSON.parse(data);
+
+        jQuery.each( product.datas, function( i, val ) {
+          console.log(val, i);
+        });
+
+      });
+
+
+      $.get("https://raw.githubusercontent.com/rudihartono7/hewanqurban/main/assets/data/testimony.json", function(data, status){
+        jQuery.each( JSON.parse(data).datas, function( i, val ) {
+          var testimonyElement = `<div class="single-testimonial">
+          <i class="lni-quotation"></i>
+          <p class="mb-30">`+val.text+`</p>
+          <h6 class="title">`+val.from+`</h6>
+          </div>`;
+          $( testimonyElement ).appendTo( $( ".testimonial-active" ) );
+        });
+      });
+
+    });
     
     //===== Prealoder
     
