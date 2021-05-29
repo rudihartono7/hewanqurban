@@ -30,8 +30,6 @@ $(function() {
         });
 
         jQuery.each( product.sapi, function( i, val ) {
-          console.log(val, i);
-
           var newProduct = `<div class="col-md-4">
                               <div class="single-product-items">
                                   <div class="product-item-image">
