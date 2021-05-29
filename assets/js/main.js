@@ -23,6 +23,8 @@ $(function() {
                                       <h6>`+val.weight+`</h6>
                                       <span class="regular-price">`+val.price+`</span>
                                       <span class="discount-price">`+val.finalPrice+`</span>
+                                      <br />
+                                      <span><a class="Video-popup" href="https://www.youtube.com/watch?v=l8ccw7BMrMA">Lihat Video<i class="lni-play"></i></a></span>
                                   </div>
                               </div> <!-- single product items -->
                           </div>`;  
@@ -41,10 +43,19 @@ $(function() {
                                       <h6>`+val.weight+`</h6>
                                       <span class="regular-price">`+val.price+`</span>
                                       <span class="discount-price">`+val.finalPrice+`</span>
+                                      <br />
+                                      <span><a class="Video-popup" href="https://www.youtube.com/watch?v=l8ccw7BMrMA">Lihat Video<i class="lni-play"></i></a></span>
                                   </div>
                               </div> <!-- single product items -->
                           </div>`;  
           $(newProduct).appendTo($(".product-sapi-items-active"));
+        });
+
+
+
+        $('.Video-popup').magnificPopup({
+            type: 'iframe'
+            // other options
         });
       });
 
