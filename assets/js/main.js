@@ -19,6 +19,7 @@ $(function() {
                                       `+showStatus(val.status)+`
                                   </div>
                                   <div class="product-item-content text-center mt-30">
+                                      <h5 class="product-title">Kode Hewan Qurban : `+val.name+`</h5>
                                       <h5 class="product-title"><a href="#">`+val.grade+`</a></h5>
                                       <h6>`+val.weight+`</h6>
                                       <span class="regular-price">`+val.price+`</span>
@@ -39,6 +40,7 @@ $(function() {
                                       `+showStatus(val.status)+`
                                   </div>
                                   <div class="product-item-content text-center mt-30">
+                                      <h5 class="product-title">Kode Hewan Qurban : `+val.name+`</h5>
                                       <h5 class="product-title"><a href="#">`+val.grade+`</a></h5>
                                       <h6>`+val.weight+`</h6>
                                       <span class="regular-price">`+val.price+`</span>
